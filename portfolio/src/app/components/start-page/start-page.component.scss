@@ -1,0 +1,113 @@
+.start-page-container {
+    background-image: url(../../../assets/herobg.png);
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .header-left {
+        p {
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    .header-right {
+        ul {
+            gap: 2.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            li {
+                color: rgb(170 166 195);
+                font-weight: 500;
+                font-size: 18px;
+                cursor: pointer;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .left {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        gap: 1.25rem;
+        align-items: flex-start;
+        flex-direction: row;
+        max-width: 80rem;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        top: 120px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
+        .violet-pin {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 1.25rem;
+            align-items: center;
+
+            .rounded-full {
+                --tw-bg-opacity: 1;
+                background-color: rgb(145 94 255 / var(--tw-bg-opacity));
+                border-radius: 9999px;
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+
+            .violet-gradient {
+                height: 20rem;
+                background: #804dee;
+                background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+                background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+                width: 0.25rem;
+            }
+        }
+
+        .my-name {
+            h1 {
+                --tw-text-opacity: 1;
+                color: rgb(255 255 255 / var(--tw-text-opacity));
+                font-weight: 900;
+                margin-top: 0.5rem;
+                font-size: 80px;
+
+                span {
+                    color: #804dee;
+                }
+            }
+
+            p {
+                margin-top: 0.5rem;
+                font-weight: 500;
+                font-size: 40px;
+                --tw-text-opacity: 1;
+                color: rgb(243 243 243 / var(--tw-text-opacity));
+                margin: 0;
+            }
+        }
+    }
+

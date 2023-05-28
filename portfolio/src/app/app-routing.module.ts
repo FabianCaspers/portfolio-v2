@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { StartPageComponent } from './components/start-page/start-page.component';
 
 const routes: Routes = [
-  { path: '', component: StartPageComponent },
-  { path: 'startpage', component: StartPageComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,60 @@
+.technologies-container {
+    background-color: #050816;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+
+    .technologies-elements {
+        gap: 2.5rem;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+
+        .technologies-icons {
+            width: 7rem;
+            height: 7rem;
+
+            .icons-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                pointer-events: auto;
+                touch-action: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.3s ease;
+                    
+                }
+
+                .icon-description {
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    color: rgb(170 166 195);
+                }
+
+                &:hover {
+                    img {
+                        transform: translateY(
+                            -20px
+                        );
+                    }
+
+                    .icon-description {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

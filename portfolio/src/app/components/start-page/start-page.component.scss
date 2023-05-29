@@ -62,6 +62,10 @@
         bottom: 0px;
         left: 0px;
         position: absolute;
+
+        @media (max-width: "1230px") {
+            position: unset;
+        }
     }
     .violet-pin {
         display: flex;
@@ -119,6 +123,10 @@
         bottom: 0;
         justify-content: flex-end;
 
+        @media (max-width: "688px") {
+            height: 30vh;
+        }
+
         img {
             border-radius: 28%;
             border: 2px solid #804dee;
@@ -144,5 +152,13 @@
             }
         }
         
+    }
+
+    section {
+        @media (max-width: "1230px") {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 }

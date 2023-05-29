@@ -6,6 +6,18 @@
     padding-right: 8rem;
     padding-top: 4rem;
     padding-bottom: 10rem;
+    @media (max-width: "450px") {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    @media (max-width: "720px") {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @media (max-width: "820px") {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 
     .headline {
         opacity: 1;
@@ -22,6 +34,9 @@
             color: white;
             font-weight: 900;
             font-size: 60px;
+            @media (max-width: "720px") {
+                font-size: 40px;
+            }
         }
     }
 
@@ -43,6 +58,10 @@
         .cards {
             width: 250px;
             transition: transform 0.3s ease-in-out;
+
+            @media (max-width: "720px") {
+                width: 150px;
+            }
             &:hover {
                 transform: scale(1.1);
             }

@@ -33,6 +33,10 @@
             color: rgb(255 255 255 / var(--tw-text-opacity));
             font-weight: 900;
             text-align: center;
+
+            @media (max-width: "720px") {
+                font-size: 40px;
+            }
         }
     }
 
@@ -55,6 +59,10 @@
             width: 4px;
             background: white;
             margin-left: 3px;
+            @media (max-width: "720px") {
+                left: 95%;
+                margin-left: 5px;
+            }
         }
 
         &::after {
@@ -114,6 +122,10 @@
                 -webkit-box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
                 box-shadow: 0 0 0 4px #fff, inset 0 2px #00000014, 0 3px 0 4px #0000000d;
 
+                @media (max-width: "720px") {
+                    left: 98%;
+                }
+
                 .company-container {
                     justify-content: center;
                     align-items: center;
@@ -142,6 +154,9 @@
 
                 @media (max-width: "850px") {
                     width: 37%;;
+                }
+                @media (max-width: "720px") {
+                    width: 60%;
                 }
 
                 .arrow-right {
@@ -200,6 +215,9 @@
 
                     @media (max-width: "850px") {
                         left: 150%;
+                    }
+                    @media (max-width: "720px") {
+                        position: unset;
                     }
                 }
             }

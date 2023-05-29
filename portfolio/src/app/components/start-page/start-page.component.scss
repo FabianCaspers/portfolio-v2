@@ -244,6 +244,13 @@
         bottom: 0;
         justify-content: flex-end;
 
+        @media (max-width: "389px") {
+            height: 25vh !important;
+            justify-content: center;
+            right: 0;
+            top: -7.5rem !important;
+        }
+
         @media (max-width: "720px") {
             height: 30vh;
             justify-content: center;

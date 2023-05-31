@@ -4,6 +4,7 @@
     padding-right: 8rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    overflow-x: unset !important;
 
     @media (max-width: "720px") {
         padding-left: 1.5rem;
@@ -17,10 +18,12 @@
         flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
+        overflow-x: unset !important;
 
         .technologies-icons {
             width: 7rem;
             height: 7rem;
+            overflow-x: unset !important;
 
             @media (max-width: "680px") {
                 width: 4rem;
@@ -33,6 +36,7 @@
                 height: 100%;
                 pointer-events: auto;
                 touch-action: none;
+                overflow-x: unset !important;
 
                 img {
                     width: 100%;

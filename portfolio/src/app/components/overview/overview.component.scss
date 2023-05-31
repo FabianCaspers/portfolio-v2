@@ -54,18 +54,21 @@
         justify-content: center;
         flex-wrap: wrap;
         margin-top: 5rem;
+        overflow-x: unset !important;
 
         .cards {
             width: 250px;
             transition: transform 0.3s ease-in-out;
             overflow: initial;
-
-            @media (max-width: "720px") {
-                width: 150px;
-            }
             &:hover {
                 transform: scale(1.1);
             }
+
+            @media (max-width: "500px") {
+                width: 150px;
+            }
+
+            
 
             .green-pink-gradient {
                 background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
@@ -89,6 +92,10 @@
                     flex-direction: column;
                     min-height: 280px;
                     display: flex;
+
+                    @media (max-width: "500px") {
+                        min-height: 180px;
+                    }
 
                     img {
                         object-fit: contain;

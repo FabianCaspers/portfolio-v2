@@ -284,6 +284,9 @@
         justify-content: center;
         align-items: center;
         height: 150px;
+        @media (max-width: "721px") {
+            display: none;
+        }
         p {
             &:hover {
                 cursor: pointer;

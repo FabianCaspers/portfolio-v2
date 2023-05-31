@@ -53,6 +53,10 @@
                     right: 0;
                     text-align: center;
                     color: rgb(170 166 195);
+                    font-size: 18px;
+                    @media (max-width: "450px") {
+                        font-size: 12px;
+                    }
                 }
 
                 &:hover {

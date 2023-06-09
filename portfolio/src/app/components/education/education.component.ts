@@ -9,6 +9,33 @@ export class EducationComponent implements OnInit {
 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
+  educationArray = [
+    {
+      companyLogo: "../../../assets/company/DA.png",
+      company: "Developer Akademie",
+      position: "Backend Developer",
+      description: ["The Developer Academy teaches a range of programming languages and tools, including HTML, CSS, JavaScript, Angular, Git, Scrum, Python, Django, SQL, Docker, Linux and IT security."],
+      date: "Mai 2023 - Now",
+      reverse: false
+    },
+    {
+      companyLogo: "../../../assets/company/DA.png",
+      company: "Developer Akademie",
+      position: "Frontend Developer",
+      description: ["The Developer Academy teaches a range of programming languages and tools, including HTML, CSS, JavaScript, Angular, Git, Scrum, Python, Django, SQL, Docker, Linux and IT security."],
+      date: "October 2022 - March 2023",
+      reverse: true
+    },
+    {
+      companyLogo: "../../../assets/company/ihk.png",
+      company: "IHK Karlsruhe",
+      position: "Logistics specialist",
+      description: ["Warehousing", "Procurement", "Accounting"],
+      date: "Mai 2018 - Mai 2019",
+      reverse: false
+    }
+  ];
+
   ngOnInit(): void {
     this.checkScreenSize();
   }

@@ -5,74 +5,30 @@
     </div>
 
     <div class="vertical-timeline">
-
-        <div data-aos="zoom-out-down" class="vertical-timeline-element">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/DA.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Developer Akademie</h3>
-                    <p>Backend Developer</p>
-                    <ul>
-                        <li>The Developer Academy teaches a range of programming languages and tools, including.
-                            HTML, CSS, JavaScript, Angular, Git, Scrum, Python, Django, SQL, Docker, Linux and
-                            IT security.</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date">Mai 2023 - Now</span>
-                </div>
-            </div>
+        <div *ngFor="let education of educationArray" 
+             [class.reverse]="education.reverse" 
+             data-aos="zoom-out-down" 
+             class="vertical-timeline-element">
+      
+          <span class="vertical-timeline-element-icon">
+              <div class="company-container">
+                  <img [src]="education.companyLogo" alt="">
+              </div>
+          </span>
+      
+          <div [class]="education.reverse ? 'vertical-timeline-element-content reverse' : 'vertical-timeline-element-content'">
+              <div class="arrow-right"></div>
+              <div>
+                  <h3>{{education.company}}</h3>
+                  <p>{{education.position}}</p>
+                  <ul>
+                      <li *ngFor="let desc of education.description">{{desc}}</li>
+                  </ul>
+                  <span [class]="education.reverse ? 'vertical-timeline-element-date-reverse' : 'vertical-timeline-element-date'">{{education.date}}</span>
+              </div>
+          </div>
         </div>
-
-
-        <div data-aos="zoom-out-down" class="vertical-timeline-element reverse">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/DA.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content reverse">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Developer Akademie</h3>
-                    <p>Frontend Developer</p>
-                    <ul>
-                        <li>The Developer Academy teaches a range of programming languages and tools, including.
-                            HTML, CSS, JavaScript, Angular, Git, Scrum, Python, Django, SQL, Docker, Linux and
-                            IT security.</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date-reverse">October 2022 - March 2023</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div data-aos="zoom-out-down" class="vertical-timeline-element">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/ihk.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Logistics specialist</h3>
-                    <p>IHK Karlsruhe</p>
-                    <ul>
-                        <li>Warehousing</li>
-                        <li>Procurement</li>
-                        <li>Accounting</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date">Mai 2018 - Mai 2019</span>
-                </div>
-            </div>
-        </div>  
-    </div>
+      </div>
+      
 
 </div>

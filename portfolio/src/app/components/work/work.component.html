@@ -5,143 +5,28 @@
     </div>
 
     <div class="vertical-timeline">
+        <div *ngFor="let work of workArray" 
+             [class.reverse]="work.reverse" 
+             [attr.data-aos]="work.reverse ? 'zoom-in-left' : 'zoom-in-right'"
+             class="vertical-timeline-element">
 
-        <div data-aos="zoom-in-right" class="vertical-timeline-element">
             <span class="vertical-timeline-element-icon">
                 <div class="company-container">
-                    <img src="../../../assets/company/ESA.png" alt="">
+                    <img [src]="work.companyLogo" alt="">
                 </div>
             </span>
 
-            <div class="vertical-timeline-element-content">
+            <div [class]="work.reverse ? 'vertical-timeline-element-content reverse' : 'vertical-timeline-element-content'">
                 <div class="arrow-right"></div>
                 <div>
-                    <h3>Logistics manager</h3>
-                    <p>ESA Honau</p>
+                    <h3>{{work.position}}</h3>
+                    <p>{{work.company}}</p>
                     <ul>
-                        <li>SAP</li>
-                        <li>Team leading</li>
-                        <li>Goods receiving</li>
+                        <li *ngFor="let task of work.tasks">{{task}}</li>
                     </ul>
-                    <span class="vertical-timeline-element-date">February 2021 - Mai 2023  <br> "Move to Switzerland"</span>
+                    <span [class]="work.reverse ? 'vertical-timeline-element-date-reverse' : 'vertical-timeline-element-date'" [innerHTML]="work.date"></span>
                 </div>
             </div>
         </div>
-
-
-        <div data-aos="zoom-in-left" class="vertical-timeline-element reverse">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/Agaba.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content reverse">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Team leader logistics</h3>
-                    <p>Agaba</p>
-                    <ul>
-                        <li>Logistics optimizations</li>
-                        <li>Loading and unloading of goods</li>
-                        <li>Customer service</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date-reverse">January 2020 - Mai 2020</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div data-aos="zoom-in-right" class="vertical-timeline-element">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/abcr.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Logistics specialist</h3>
-                    <p>ABCR Gute Chemie</p>
-                    <ul>
-                        <li>SAP</li>
-                        <li>Goods receiving</li>
-                        <li>Quality control</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date">July 2017 - December 2019</span>
-                </div>
-            </div>
-        </div>
-
-        <div data-aos="zoom-in-left" class="vertical-timeline-element reverse">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/carl-roth.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content reverse">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Team leader logistics</h3>
-                    <p>Carl Roth</p>
-                    <ul>
-                        <li>Goods receiving</li>
-                        <li>Stock care</li>
-                        <li>SAP</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date-reverse">Mai 2015 - April 2017</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div data-aos="zoom-in-right" class="vertical-timeline-element">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/sew.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Logistics specialist</h3>
-                    <p>SEW Eurodrive</p>
-                    <ul>
-                        <li>SAP</li>
-                        <li>Packer</li>
-                        <li>Quality control</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date">July 2014 - December 2014</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div data-aos="zoom-in-left" class="vertical-timeline-element reverse">
-            <span class="vertical-timeline-element-icon">
-                <div class="company-container">
-                    <img src="../../../assets/company/mercedes.png" alt="">
-                </div>
-            </span>
-
-            <div class="vertical-timeline-element-content reverse">
-                <div class="arrow-right"></div>
-                <div>
-                    <h3>Shift leader logistics</h3>
-                    <p>Mercedes-Benz</p>
-                    <ul>
-                        <li>Goods receipt</li>
-                        <li>Suppliers internal</li>
-                        <li>SAP</li>
-                    </ul>
-                    <span class="vertical-timeline-element-date-reverse">March 2012 - April 2014</span>
-                </div>
-            </div>
-        </div>
-
     </div>
-
 </div>

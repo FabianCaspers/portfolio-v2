@@ -13,179 +13,26 @@
     </div>
 
     <div data-aos="zoom-in-up" class="projects">
-
-        <div class="projects-card-outside">
+        <div *ngFor="let project of projects" class="projects-card-outside">
             <div class="projects-card-inside">
                 <div class="project-img">
-                    <img src="../../../assets/join.png" alt="">
+                    <img [src]="project.imageUrl" alt="">
                 </div>
 
                 <div class="project-headline">
-                    <h3>Join</h3>
-                    <p>Join is a Kanban software that simplifies project management, optimizes workflows, and boosts
-                        productivity. With customizable boards and automated workflows, teams can track progress and
-                        collaborate seamlessly.</p>
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
                 </div>
 
                 <div class="project-technologies">
-                    <p class="blue">#HTML</p>
-                    <p class="green">#CSS</p>
-                    <p class="red">#JavaScript</p>
-                </div>
-                <div class="buttons">
-                    <a href="https://join.fabiancaspers.com/" target="_blank" class="blue">Live Test</a>
-                    <a href="https://github.com/FabianCaspers/Join.git" target="_blank" class="red">Git</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-card-outside">
-            <div class="projects-card-inside">
-                <div class="project-img">
-                    <img src="../../../assets/join2.png" alt="">
-                </div>
-
-                <div class="project-headline">
-                    <h3>Join 2.0</h3>
-                    <p>Join is a Kanban software that simplifies project management, optimizes workflows, and boosts
-                        productivity. With customizable boards and automated workflows, teams can track progress and
-                        collaborate seamlessly.</p>
-                </div>
-
-                <div class="project-technologies">
-                    <p class="blue">#HTML</p>
-                    <p class="green">#CSS</p>
-                    <p class="red">#JavaScript</p>
-                </div>
-                <div class="buttons">
-                    <a href="https://darkjoin.fabiancaspers.com/" target="_blank" class="blue">Live Test</a>
-                    <a href="https://github.com/FabianCaspers/join_dark.git" target="_blank" class="red">Git</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-card-outside">
-            <div class="projects-card-inside">
-                <div class="project-img">
-                    <img src="../../../assets/pokedex.png" alt="">
-                </div>
-
-                <div class="project-headline">
-                    <h3>Pokedex</h3>
-                    <p>Based on the PokeAPI a simple library that provides and catalogues pokemon information.</p>
-                </div>
-
-                <div class="project-technologies">
-                    <p class="blue">#HTML</p>
-                    <p class="green">#CSS</p>
-                    <p class="red">#JavaScript</p>
-                    <p class="blue">#API</p>
-                </div>
-                <div class="buttons">
-                    <a href="https://pokedex.fabiancaspers.com/index.html" target="_blank" class="blue">Live Test</a>
-                    <a href="https://github.com/FabianCaspers/pokedex.git" target="_blank" class="red">Git</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-card-outside">
-            <div class="projects-card-inside">
-                <div class="project-img">
-                    <img src="../../../assets/polloloco.png" alt="">
-                </div>
-
-                <div class="project-headline">
-                    <h3>El Pollo Loco</h3>
-                    <p>In El Pollo Loco, players help Pepe fight off chickens using a throwable glass bottle and the
-                        ability to jump on them. It's a unique and fun game for all ages.</p>
-                </div>
-
-                <div class="project-technologies">
-                    <p class="blue">#HTML</p>
-                    <p class="green">#CSS</p>
-                    <p class="red">#JavaScript</p>
+                    <p *ngFor="let tech of project.technologies" [ngClass]="getTechClass(tech)">{{tech}}</p>
                 </div>
 
                 <div class="buttons">
-                    <a href="https://elpolloloco.fabiancaspers.com/index.html" target="_blank" class="blue">Live Test</a>
-                    <a href="https://github.com/FabianCaspers/elpolloloco.git" target="_blank" class="red">Git</a>
+                    <a *ngIf="project.liveTestUrl" [href]="project.liveTestUrl" target="_blank" class="blue">Live Test</a>
+                    <a *ngIf="project.gitUrl" [href]="project.gitUrl" target="_blank" class="red">Git</a>
                 </div>
             </div>
         </div>
-
-
-        <div class="projects-card-outside">
-            <div class="projects-card-inside">
-                <div class="project-img">
-                    <img src="../../../assets/new-portfolio.png" alt="">
-                </div>
-
-                <div class="project-headline">
-                    <h3>Personal Portfolio</h3>
-                    <p>My portfolio features projects utilizing Angular, showcasing visually captivating with a focus on web development.</p>
-                </div>
-
-                <div class="project-technologies">
-                    <p class="blue">#HTML</p>
-                    <p class="green">#SCSS</p>
-                    <p class="red">#Angular</p>
-                </div>
-
-                <div class="buttons">
-                    <a href="https://fabiancaspers.com/" target="_blank" class="blue">Live Test</a>
-                    <a href="https://github.com/FabianCaspers/portfolio-v2.git" target="_blank" class="red">Git</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-card-outside">
-            <div class="projects-card-inside">
-                <div class="project-img">
-                    <img src="../../../assets/coming.png" alt="">
-                </div>
-
-                <div class="project-headline">
-                    <h3>Chatterix</h3>
-                    <p>Chatterix is a clone based in Slack.</p>
-                </div>
-
-                <div class="project-technologies">
-                    <p class="blue">#HTML</p>
-                    <p class="green">#SCSS</p>
-                    <p class="red">#Angular</p>
-                </div>
-
-                <div class="buttons">
-                    <a class="blue">Live Test</a>
-                    <a class="red">Git</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-card-outside">
-            <div class="projects-card-inside">
-                <div class="project-img">
-                    <img src="../../../assets/7vswild.png" alt="">
-                </div>
-
-                <div class="project-headline">
-                    <h3>7vsWild 3D FanMade</h3>
-                    <p>I'm a big fan of 7vsWild. So I started my own 3D mini Project</p>
-                </div>
-
-                <div class="project-technologies">
-                    <p class="blue">#HTML</p>
-                    <p class="green">#CSS</p>
-                    <p class="red">#JavaScript</p>
-                </div>
-
-                <div class="buttons">
-                    <a class="blue">Live Test</a>
-                    <a class="red">Git</a>
-                </div>
-            </div>
-        </div>
-
     </div>
-
 </div>
